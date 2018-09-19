@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Entities-Web.config Connection String" description="Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Logger.csdl|res://*/Models.Logger.ssdl|res://*/Models.Logger.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=10.0.3.53:1521/oracle;PASSWORD=Tdmasset123;PERSIST SECURITY INFO=True;USER ID=SYSTEM&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Sarita\\Latest\ Running\ Backup\\Asset-Oracle\\Asset-OracleLogger\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+</parameters>

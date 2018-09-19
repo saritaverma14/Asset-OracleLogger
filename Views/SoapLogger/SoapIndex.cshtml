@@ -1,0 +1,192 @@
+﻿@model PagedList.IPagedList<Asset_OracleLogger.Models.SV_LOGGER>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Service Virtualization Test Data MAnagement Portal";
+
+}
+<script src="~/Scripts/ProjectScriptSoap.js"></script>
+<script src="~/Scripts/SoapLoggerScript.js"></script>
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/foundation.min.css">
+<link rel="stylesheet" href="~/Content/css/normalize.css">
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="../assets/js/modernizr.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    .modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+        .modalDialog:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modalDialog > div {
+            width: 900px;
+            height: auto;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+            background: -moz-linear-gradient(#fff, #999);
+            background: -webkit-linear-gradient(#fff, #999);
+            background: -o-linear-gradient(#fff, #999);
+        }
+
+    .close {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+
+        .close:hover {
+            background: #00d9ff;
+        }
+</style>
+
+@using (Html.BeginForm("SoapIndex", "SoapLogger", FormMethod.Post))
+{
+
+    <p> &nbsp; &nbsp;</p>
+
+
+    <div class="col-lg-8">
+        <a class="acn-logo" title="Accenture" data-rel="856d2796-13ab-4036-9c60-87b846b6dea1" data-name="asset" data-linktype="navigationsettings:logo" tabindex="0">
+            <img src="//www.accenture.com/t20171113T020841Z__w__/us-en/_acnmedia/Accenture/Dev/ComponentImages/logo-accenture.svg" alt="Accenture" style="text-align:right;" />
+        </a>
+    </div>
+
+
+    <div class="col-lg-3">
+        <b>Search By ID or Text:</b>
+        <p>
+            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @placeholder = "Search By ID or Text", @class = "form-control col-lg-8" })
+
+        </p>
+    </div>
+    <div class="col-lg-1">
+        &nbsp;
+        <input type="submit" class="btn btn-primary" value="Search" id="submit" />
+    </div>
+
+
+    <p>&nbsp; &nbsp; </p>
+
+
+    <div class="col-lg-3">
+        <label for="SelectedUserRoleId">Program</label>
+        <br />
+        @Html.DropDownList("PROGRAM", (IEnumerable<SelectListItem>)ViewData["dbSoapMyProgram"], "Select Program", new { id = "ddlProgram", @class = "form-control", @name = "Program", @onchange = "GetProject();" })
+    </div>
+    <div class="col-lg-2">
+        <label for="SelectedUserRoleId">Project</label>
+        <br />
+        @Html.DropDownList("PROJECT", (IEnumerable<SelectListItem>)ViewData["dbSoapMyProject"], "Select Project", new { disabled = "disabled", id = "ddlProject", @class = "form-control", @name = "Project", @onchange = "GetRelease();" })
+    </div>
+
+    <div class="col-lg-2">
+        <label for="SelectedUserRoleId">Release</label>
+        <br />
+        @Html.DropDownList("RELEASE", (IEnumerable<SelectListItem>)ViewData["dbSoapMyRelease"], "Select Release", new { disabled = "disabled", id = "ddlRelease", @class = "form-control", @name = "ProjectRelease", @onchange = "GetOperation();" })
+
+    </div>
+    <div class="col-lg-3">
+        <label for="SelectedUserRoleId">Operation</label>
+        <br />
+        @Html.DropDownList("OPERATION", (IEnumerable<SelectListItem>)ViewData["dbSoapMyApi"], "Select Operation", new { disabled = "disabled", id = "ddlOperation", @class = "form-control", @name = "Operation", @onchange = "GetSprint();" })
+
+    </div>
+    <div class="col-lg-2">
+        <label for="SelectedUserRoleId">Sprint</label>
+        <br />
+        @Html.DropDownList("SPRINT", (IEnumerable<SelectListItem>)ViewData["dbSoapMySprint"], "Select Sprint", new { disabled = "disabled", id = "ddlSprint", @class = "form-control", @name = "Sprint", @onchange = "GetData();" })
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div style="text-align:left;" class="col-lg-3">
+        @Html.DropDownList("Sortby", new SelectListItem[]
+            {
+                new SelectListItem() { Text = "Display # of Records:", Value = "0" },
+                new SelectListItem() { Text = "10", Value = "10" },
+                new SelectListItem() { Text = "25", Value = "25" },
+                new SelectListItem() { Text = "50", Value = "50" },
+                new SelectListItem() { Text = "100", Value = "100" }},
+                new
+                {
+                    @onchange = "SelectCallChangefunc(this.value)",
+                    @class = "form-control",
+                    @id = "ddlCount"
+                })
+    </div>
+    <div style="text-align:left;" class="col-lg-2">
+        <label for="chkNo">
+            <input type="radio" name="personne" id="nonCli" value="REST" onchange="choixPersonne('cacher2')" />
+            Rest
+        </label>
+        <label for="chkYes">
+            <input type="radio" name="personne" id="ouiCli" value="SOAP" onchange=" choixPersonne('cacher1')" checked="checked" />
+            Soap
+        </label>
+
+    </div>
+
+    <div id="divMaskDashboard" class="container">
+        @{ Html.RenderPartial("_ViewSoapDetail", ViewData.Model); }
+
+    </div>
+
+
+}
+
+<script language="javascript">
+
+    function choixPersonne(chaine) {
+        debugger;
+        var a = document.getElementById("divMaskDashboard");
+        var b = document.getElementById("option");
+        if (chaine == 'cacher1') {
+            window.location = '@Url.Action("SoapIndex", "SoapLogger")';
+        }
+        else if (chaine == 'cacher2') {
+            window.location = '@Url.Action("LoggerUI", "OracleLogger")';
+        }
+
+    }
+</script>
+@Html.Raw(TempData["msg"])
+@Html.Raw(TempData["deleteSuccess"])
+
+

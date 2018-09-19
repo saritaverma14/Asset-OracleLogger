@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoggerModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SV_LOGGER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PROGRAM" Type="varchar2" MaxLength="50" />
+    <Property Name="PROJECT" Type="varchar2" MaxLength="50" />
+    <Property Name="RELEASE" Type="varchar2" MaxLength="50" />
+    <Property Name="SPRINT" Type="varchar2" MaxLength="50" />
+    <Property Name="KEYDATA" Type="nclob" />
+    <Property Name="TIMERECEIVED" Type="timestamp" Precision="6" />
+    <Property Name="RESPONSETIME" Type="timestamp" Precision="6" />
+    <Property Name="METHOD" Type="varchar2" MaxLength="50" />
+    <Property Name="URI" Type="varchar2" MaxLength="50" />
+    <Property Name="APIOPERATION" Type="varchar2" MaxLength="500" />
+    <Property Name="RESPONSE" Type="nclob" />
+    <Property Name="REQUEST" Type="nclob" />
+    <Property Name="OPERATION" Type="varchar2" MaxLength="500" />
+    <Property Name="SERVICETYPE" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SV_SERVICEDETAILS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PROGRAM" Type="varchar2" MaxLength="50" />
+    <Property Name="PROJECT" Type="varchar2" MaxLength="50" />
+    <Property Name="RELEASE" Type="varchar2" MaxLength="50" />
+    <Property Name="APIOPERATION" Type="varchar2" MaxLength="50" />
+    <Property Name="SPRINT" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATEDDATE" Type="timestamp" Precision="6" />
+    <Property Name="LASTMODIFIEDDATE" Type="timestamp" Precision="6" />
+    <Property Name="ARGUMENT1" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENT2" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENTVALUE2" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENTVALUE3" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENT4" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENTVALUE4" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENT5" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENTVALUE5" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUESTHEADER1" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUESTHEADERVALUE1" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUESTHEADER2" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUESTHEADERVALUE2" Type="nclob" />
+    <Property Name="REQUESTHEADER3" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUESTHEADERVALUE3" Type="varchar2" MaxLength="250" />
+    <Property Name="RESPONSEHEADER1" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSEHEADERVALUE1" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSEHEADER2" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSEHEADERVALUE2" Type="varchar2" MaxLength="50" />
+    <Property Name="LIVESERVER" Type="varchar2" MaxLength="50" />
+    <Property Name="LIVEPORT" Type="number" Precision="38" Scale="0" />
+    <Property Name="METHOD" Type="varchar2" MaxLength="50" />
+    <Property Name="URI" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTMODIFIEDBY" Type="varchar2" MaxLength="50" />
+    <Property Name="USERID" Type="varchar2" MaxLength="50" />
+    <Property Name="ARGUMENTVALUE1" Type="varchar2" MaxLength="50" />
+    <Property Name="NUMOFMODIFICATIONS" Type="number" Precision="38" Scale="0" />
+    <Property Name="ARGUMENT3" Type="varchar2" MaxLength="50" />
+    <Property Name="REQUEST" Type="nclob" />
+    <Property Name="RESPONSE" Type="nclob" />
+    <Property Name="OPERATION" Type="varchar2" MaxLength="100" />
+    <Property Name="SERVICETYPE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <Function Name="ADD_SERVICEDETAILS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SYSTEM">
+    <Parameter Name="P_PROGRAM" Type="varchar2" Mode="In" />
+    <Parameter Name="P_PROJECT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RELEASE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_APIOPERATION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_SPRINT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT4" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE4" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT5" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE5" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REQUESTHEADER1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REQUESTHEADERVALUE1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REQUESTHEADER2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REQUESTHEADERVALUE2" Type="nclob" Mode="In" />
+    <Parameter Name="P_REQUESTHEADER3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REQUESTHEADERVALUE3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSEHEADER1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSEHEADERVALUE1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSEHEADER2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSEHEADERVALUE2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_LIVESERVER" Type="varchar2" Mode="In" />
+    <Parameter Name="P_LIVEPORT" Type="number" Mode="In" />
+    <Parameter Name="P_METHOD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_URI" Type="varchar2" Mode="In" />
+    <Parameter Name="P_LASTMODIFIEDBY" Type="varchar2" Mode="In" />
+    <Parameter Name="P_USERID" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NUMBEROFMODIFICTIONS" Type="number" Mode="In" />
+    <Parameter Name="P_RESPONSE" Type="nclob" Mode="In" />
+    <Parameter Name="P_REQUEST" Type="nclob" Mode="In" />
+    <Parameter Name="P_SERVICETYPE" Type="varchar2" Mode="In" />
+  </Function>
+  <Function Name="ADD_SERVICELOGGER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SYSTEM">
+    <Parameter Name="P_PROGRAM" Type="varchar2" Mode="In" />
+    <Parameter Name="P_PROJECT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RELEASE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_APIOPERATION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_SPRINT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_KEYDATA" Type="nclob" Mode="In" />
+    <Parameter Name="P_METHOD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_URI" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSE" Type="nclob" Mode="In" />
+    <Parameter Name="P_REQUEST" Type="nclob" Mode="In" />
+  </Function>
+  <Function Name="ADD_SOAPDETAILS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SYSTEM">
+    <Parameter Name="P_PROGRAM" Type="varchar2" Mode="In" />
+    <Parameter Name="P_PROJECT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RELEASE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_OPERATION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_SPRINT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE1" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE2" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE3" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT4" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE4" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENT5" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ARGUMENTVALUE5" Type="varchar2" Mode="In" />
+    <Parameter Name="P_LASTMODIFIEDBY" Type="varchar2" Mode="In" />
+    <Parameter Name="P_USERID" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NUMBEROFMODIFICTIONS" Type="number" Mode="In" />
+    <Parameter Name="P_RESPONSE" Type="nclob" Mode="In" />
+    <Parameter Name="P_REQUEST" Type="nclob" Mode="In" />
+    <Parameter Name="P_SERVICETYPE" Type="varchar2" Mode="In" />
+  </Function>
+  <Function Name="LOGGER_GETLIST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SYSTEM" />
+  <EntityContainer Name="LoggerModelStoreContainer">
+    <EntitySet Name="SV_LOGGER" EntityType="Self.SV_LOGGER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="SV_SERVICEDETAILS" EntityType="Self.SV_SERVICEDETAILS" Schema="SYSTEM" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

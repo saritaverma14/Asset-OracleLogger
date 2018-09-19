@@ -1,0 +1,55 @@
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.dll.config
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.pdb
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\EntityFramework.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\Newtonsoft.Json.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\PagedList.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\PagedList.Mvc.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Linq.Dynamic.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Helpers.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Mvc.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Razor.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Deployment.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Razor.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\EntityFramework.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\Newtonsoft.Json.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\PagedList.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\PagedList.Mvc.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Razor.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Deployment.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Razor.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Helpers.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Mvc.xml
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.dll
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.pdb
+C:\Sarita\Oracle\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.csprojResolveAssemblyReference.cache
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.dll.config
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Asset-OracleLogger.pdb
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\EntityFramework.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Newtonsoft.Json.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\PagedList.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\PagedList.Mvc.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Linq.Dynamic.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Helpers.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Mvc.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Razor.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Deployment.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Razor.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\EntityFramework.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Newtonsoft.Json.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\PagedList.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\PagedList.Mvc.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Razor.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Deployment.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Webpages.Razor.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Helpers.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\System.Web.Mvc.xml
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.csprojResolveAssemblyReference.cache
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.dll
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\obj\Release\Asset-OracleLogger.pdb
+C:\Sarita\Latest Running Backup\Asset-Oracle\Asset-OracleLogger\bin\Oracle.DataAccess.dll

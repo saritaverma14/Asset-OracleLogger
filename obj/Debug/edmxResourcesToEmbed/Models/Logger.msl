@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LoggerModelStoreContainer" CdmEntityContainer="Entities">
+    <FunctionImportMapping FunctionImportName="ADD_SERVICELOGGER" FunctionName="LoggerModel.Store.ADD_SERVICELOGGER" />
+    <FunctionImportMapping FunctionImportName="LOGGER_GETLIST" FunctionName="LoggerModel.Store.LOGGER_GETLIST" />
+    <EntitySetMapping Name="SV_SERVICEDETAILS">
+      <EntityTypeMapping TypeName="LoggerModel.SV_SERVICEDETAILS">
+        <MappingFragment StoreEntitySet="SV_SERVICEDETAILS">
+          <ScalarProperty Name="SERVICETYPE" ColumnName="SERVICETYPE" />
+          <ScalarProperty Name="OPERATION" ColumnName="OPERATION" />
+          <ScalarProperty Name="RESPONSE" ColumnName="RESPONSE" />
+          <ScalarProperty Name="REQUEST" ColumnName="REQUEST" />
+          <ScalarProperty Name="ARGUMENT3" ColumnName="ARGUMENT3" />
+          <ScalarProperty Name="NUMOFMODIFICATIONS" ColumnName="NUMOFMODIFICATIONS" />
+          <ScalarProperty Name="ARGUMENTVALUE1" ColumnName="ARGUMENTVALUE1" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="LASTMODIFIEDBY" ColumnName="LASTMODIFIEDBY" />
+          <ScalarProperty Name="URI" ColumnName="URI" />
+          <ScalarProperty Name="METHOD" ColumnName="METHOD" />
+          <ScalarProperty Name="LIVEPORT" ColumnName="LIVEPORT" />
+          <ScalarProperty Name="LIVESERVER" ColumnName="LIVESERVER" />
+          <ScalarProperty Name="RESPONSEHEADERVALUE2" ColumnName="RESPONSEHEADERVALUE2" />
+          <ScalarProperty Name="RESPONSEHEADER2" ColumnName="RESPONSEHEADER2" />
+          <ScalarProperty Name="RESPONSEHEADERVALUE1" ColumnName="RESPONSEHEADERVALUE1" />
+          <ScalarProperty Name="RESPONSEHEADER1" ColumnName="RESPONSEHEADER1" />
+          <ScalarProperty Name="REQUESTHEADERVALUE3" ColumnName="REQUESTHEADERVALUE3" />
+          <ScalarProperty Name="REQUESTHEADER3" ColumnName="REQUESTHEADER3" />
+          <ScalarProperty Name="REQUESTHEADERVALUE2" ColumnName="REQUESTHEADERVALUE2" />
+          <ScalarProperty Name="REQUESTHEADER2" ColumnName="REQUESTHEADER2" />
+          <ScalarProperty Name="REQUESTHEADERVALUE1" ColumnName="REQUESTHEADERVALUE1" />
+          <ScalarProperty Name="REQUESTHEADER1" ColumnName="REQUESTHEADER1" />
+          <ScalarProperty Name="ARGUMENTVALUE5" ColumnName="ARGUMENTVALUE5" />
+          <ScalarProperty Name="ARGUMENT5" ColumnName="ARGUMENT5" />
+          <ScalarProperty Name="ARGUMENTVALUE4" ColumnName="ARGUMENTVALUE4" />
+          <ScalarProperty Name="ARGUMENT4" ColumnName="ARGUMENT4" />
+          <ScalarProperty Name="ARGUMENTVALUE3" ColumnName="ARGUMENTVALUE3" />
+          <ScalarProperty Name="ARGUMENTVALUE2" ColumnName="ARGUMENTVALUE2" />
+          <ScalarProperty Name="ARGUMENT2" ColumnName="ARGUMENT2" />
+          <ScalarProperty Name="ARGUMENT1" ColumnName="ARGUMENT1" />
+          <ScalarProperty Name="LASTMODIFIEDDATE" ColumnName="LASTMODIFIEDDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="SPRINT" ColumnName="SPRINT" />
+          <ScalarProperty Name="APIOPERATION" ColumnName="APIOPERATION" />
+          <ScalarProperty Name="RELEASE" ColumnName="RELEASE" />
+          <ScalarProperty Name="PROJECT" ColumnName="PROJECT" />
+          <ScalarProperty Name="PROGRAM" ColumnName="PROGRAM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="LoggerModel.SV_SERVICEDETAILS">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="LoggerModel.Store.ADD_SERVICEDETAILS">
+            <ScalarProperty Name="SERVICETYPE" ParameterName="P_SERVICETYPE" />
+            <ScalarProperty Name="REQUEST" ParameterName="P_REQUEST" />
+            <ScalarProperty Name="RESPONSE" ParameterName="P_RESPONSE" />
+            <ScalarProperty Name="NUMOFMODIFICATIONS" ParameterName="P_NUMBEROFMODIFICTIONS" />
+            <ScalarProperty Name="USERID" ParameterName="P_USERID" />
+            <ScalarProperty Name="LASTMODIFIEDBY" ParameterName="P_LASTMODIFIEDBY" />
+            <ScalarProperty Name="URI" ParameterName="P_URI" />
+            <ScalarProperty Name="METHOD" ParameterName="P_METHOD" />
+            <ScalarProperty Name="LIVEPORT" ParameterName="P_LIVEPORT" />
+            <ScalarProperty Name="LIVESERVER" ParameterName="P_LIVESERVER" />
+            <ScalarProperty Name="RESPONSEHEADERVALUE2" ParameterName="P_RESPONSEHEADERVALUE2" />
+            <ScalarProperty Name="RESPONSEHEADER2" ParameterName="P_RESPONSEHEADER2" />
+            <ScalarProperty Name="RESPONSEHEADERVALUE1" ParameterName="P_RESPONSEHEADERVALUE1" />
+            <ScalarProperty Name="RESPONSEHEADER1" ParameterName="P_RESPONSEHEADER1" />
+            <ScalarProperty Name="REQUESTHEADERVALUE3" ParameterName="P_REQUESTHEADERVALUE3" />
+            <ScalarProperty Name="REQUESTHEADER3" ParameterName="P_REQUESTHEADER3" />
+            <ScalarProperty Name="REQUESTHEADERVALUE2" ParameterName="P_REQUESTHEADERVALUE2" />
+            <ScalarProperty Name="REQUESTHEADER2" ParameterName="P_REQUESTHEADER2" />
+            <ScalarProperty Name="REQUESTHEADERVALUE1" ParameterName="P_REQUESTHEADERVALUE1" />
+            <ScalarProperty Name="REQUESTHEADER1" ParameterName="P_REQUESTHEADER1" />
+            <ScalarProperty Name="ARGUMENTVALUE5" ParameterName="P_ARGUMENTVALUE5" />
+            <ScalarProperty Name="ARGUMENT5" ParameterName="P_ARGUMENT5" />
+            <ScalarProperty Name="ARGUMENTVALUE4" ParameterName="P_ARGUMENTVALUE4" />
+            <ScalarProperty Name="ARGUMENT4" ParameterName="P_ARGUMENT4" />
+            <ScalarProperty Name="ARGUMENTVALUE3" ParameterName="P_ARGUMENTVALUE3" />
+            <ScalarProperty Name="ARGUMENT3" ParameterName="P_ARGUMENT3" />
+            <ScalarProperty Name="ARGUMENTVALUE2" ParameterName="P_ARGUMENTVALUE2" />
+            <ScalarProperty Name="ARGUMENTVALUE1" ParameterName="P_ARGUMENTVALUE1" />
+            <ScalarProperty Name="ARGUMENT2" ParameterName="P_ARGUMENT2" />
+            <ScalarProperty Name="ARGUMENT1" ParameterName="P_ARGUMENT1" />
+            <ScalarProperty Name="SPRINT" ParameterName="P_SPRINT" />
+            <ScalarProperty Name="APIOPERATION" ParameterName="P_APIOPERATION" />
+            <ScalarProperty Name="RELEASE" ParameterName="P_RELEASE" />
+            <ScalarProperty Name="PROJECT" ParameterName="P_PROJECT" />
+            <ScalarProperty Name="PROGRAM" ParameterName="P_PROGRAM" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SV_LOGGER">
+      <EntityTypeMapping TypeName="LoggerModel.SV_LOGGER">
+        <MappingFragment StoreEntitySet="SV_LOGGER">
+          <ScalarProperty Name="SERVICETYPE" ColumnName="SERVICETYPE" />
+          <ScalarProperty Name="OPERATION" ColumnName="OPERATION" />
+          <ScalarProperty Name="REQUEST" ColumnName="REQUEST" />
+          <ScalarProperty Name="RESPONSE" ColumnName="RESPONSE" />
+          <ScalarProperty Name="APIOPERATION" ColumnName="APIOPERATION" />
+          <ScalarProperty Name="URI" ColumnName="URI" />
+          <ScalarProperty Name="METHOD" ColumnName="METHOD" />
+          <ScalarProperty Name="RESPONSETIME" ColumnName="RESPONSETIME" />
+          <ScalarProperty Name="TIMERECEIVED" ColumnName="TIMERECEIVED" />
+          <ScalarProperty Name="KEYDATA" ColumnName="KEYDATA" />
+          <ScalarProperty Name="SPRINT" ColumnName="SPRINT" />
+          <ScalarProperty Name="RELEASE" ColumnName="RELEASE" />
+          <ScalarProperty Name="PROJECT" ColumnName="PROJECT" />
+          <ScalarProperty Name="PROGRAM" ColumnName="PROGRAM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ADD_SERVICEDETAILS" FunctionName="LoggerModel.Store.ADD_SERVICEDETAILS" />
+    <FunctionImportMapping FunctionImportName="ADD_SOAPDETAILS" FunctionName="LoggerModel.Store.ADD_SOAPDETAILS" />
+  </EntityContainerMapping>
+</Mapping>

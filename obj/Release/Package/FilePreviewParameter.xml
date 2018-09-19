@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/Asset-OracleLogger" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Sarita\\Latest\ Running\ Backup\\Asset-Oracle\\Asset-OracleLogger\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Sarita\\Latest\ Running\ Backup\\Asset-Oracle\\Asset-OracleLogger\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Entities-Web.config Connection String" description="" value="metadata=res://*/Models.Logger.csdl|res://*/Models.Logger.ssdl|res://*/Models.Logger.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=10.0.3.53:1521/oracle;PASSWORD=Tdmasset123;PERSIST SECURITY INFO=True;USER ID=SYSTEM&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Sarita\\Latest\ Running\ Backup\\Asset-Oracle\\Asset-OracleLogger\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+</parameters>

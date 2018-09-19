@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoggerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="ADD_SERVICELOGGER">
+      <Parameter Name="P_PROGRAM" Mode="In" Type="String" />
+      <Parameter Name="P_PROJECT" Mode="In" Type="String" />
+      <Parameter Name="P_RELEASE" Mode="In" Type="String" />
+      <Parameter Name="P_APIOPERATION" Mode="In" Type="String" />
+      <Parameter Name="P_SPRINT" Mode="In" Type="String" />
+      <Parameter Name="P_KEYDATA" Mode="In" Type="String" />
+      <Parameter Name="P_METHOD" Mode="In" Type="String" />
+      <Parameter Name="P_URI" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSE" Mode="In" Type="String" />
+      <Parameter Name="P_REQUEST" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="LOGGER_GETLIST" />
+    <EntitySet Name="SV_SERVICEDETAILS" EntityType="LoggerModel.SV_SERVICEDETAILS" />
+    <EntitySet Name="SV_LOGGER" EntityType="LoggerModel.SV_LOGGER" />
+    <FunctionImport Name="ADD_SERVICEDETAILS">
+      <Parameter Name="P_PROGRAM" Mode="In" Type="String" />
+      <Parameter Name="P_PROJECT" Mode="In" Type="String" />
+      <Parameter Name="P_RELEASE" Mode="In" Type="String" />
+      <Parameter Name="P_APIOPERATION" Mode="In" Type="String" />
+      <Parameter Name="P_SPRINT" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT1" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE1" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT2" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE2" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT3" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE3" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT4" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE4" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT5" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE5" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADER1" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADERVALUE1" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADER2" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADERVALUE2" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADER3" Mode="In" Type="String" />
+      <Parameter Name="P_REQUESTHEADERVALUE3" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSEHEADER1" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSEHEADERVALUE1" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSEHEADER2" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSEHEADERVALUE2" Mode="In" Type="String" />
+      <Parameter Name="P_LIVESERVER" Mode="In" Type="String" />
+      <Parameter Name="P_LIVEPORT" Mode="In" Type="Decimal" />
+      <Parameter Name="P_METHOD" Mode="In" Type="String" />
+      <Parameter Name="P_URI" Mode="In" Type="String" />
+      <Parameter Name="P_LASTMODIFIEDBY" Mode="In" Type="String" />
+      <Parameter Name="P_USERID" Mode="In" Type="String" />
+      <Parameter Name="P_NUMBEROFMODIFICTIONS" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RESPONSE" Mode="In" Type="String" />
+      <Parameter Name="P_REQUEST" Mode="In" Type="String" />
+      <Parameter Name="P_SERVICETYPE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ADD_SOAPDETAILS">
+      <Parameter Name="P_PROGRAM" Mode="In" Type="String" />
+      <Parameter Name="P_PROJECT" Mode="In" Type="String" />
+      <Parameter Name="P_RELEASE" Mode="In" Type="String" />
+      <Parameter Name="P_OPERATION" Mode="In" Type="String" />
+      <Parameter Name="P_SPRINT" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT1" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE1" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT2" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE2" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT3" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE3" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT4" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE4" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENT5" Mode="In" Type="String" />
+      <Parameter Name="P_ARGUMENTVALUE5" Mode="In" Type="String" />
+      <Parameter Name="P_LASTMODIFIEDBY" Mode="In" Type="String" />
+      <Parameter Name="P_USERID" Mode="In" Type="String" />
+      <Parameter Name="P_NUMBEROFMODIFICTIONS" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RESPONSE" Mode="In" Type="String" />
+      <Parameter Name="P_REQUEST" Mode="In" Type="String" />
+      <Parameter Name="P_SERVICETYPE" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="SV_SERVICEDETAILS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PROGRAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROJECT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RELEASE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APIOPERATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDDATE" Type="DateTime" Precision="6" />
+    <Property Name="LASTMODIFIEDDATE" Type="DateTime" Precision="6" />
+    <Property Name="ARGUMENT1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENT2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENTVALUE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENTVALUE3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENT4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENTVALUE4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENT5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENTVALUE5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUESTHEADER1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUESTHEADERVALUE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUESTHEADER2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUESTHEADERVALUE2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="REQUESTHEADER3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUESTHEADERVALUE3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSEHEADER1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSEHEADERVALUE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSEHEADER2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSEHEADERVALUE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LIVESERVER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LIVEPORT" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="METHOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTMODIFIEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ARGUMENTVALUE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NUMOFMODIFICATIONS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ARGUMENT3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQUEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RESPONSE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OPERATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICETYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SV_LOGGER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PROGRAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROJECT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RELEASE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KEYDATA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TIMERECEIVED" Type="DateTime" Precision="6" />
+    <Property Name="RESPONSETIME" Type="DateTime" Precision="6" />
+    <Property Name="METHOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APIOPERATION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RESPONSE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="REQUEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OPERATION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICETYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
